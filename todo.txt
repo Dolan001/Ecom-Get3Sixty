@@ -1,0 +1,42 @@
+Create virtual environment
+pip install Django
+Django-rest-framework
+django-cors-headers - security api backend
+Djoser - authentication
+Pillow - image library
+Stripe
+Django-admin startproject name
+
+
+Installed apps:
+'rest_framework',
+'rest_framework.authtoken',
+'corsheaders',
+'djoser'
+
+
+Frontend connection(before middleware):
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080"
+]
+
+
+Middleware:
+'corsheaders.middleware.CorsMiddleware'(before commonmiddleware)
+
+
+Project url.py:
+    path('api/v1/', include('djoser.urls')),
+    path('api/v1/', include('djoser.urls.authtoken'))
+
+
+
+Frontend:
+Vue create project name
+npm install axios (backend connection)
+npm install bulma (css)
+
+Font awesame to index.js:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+npm install bulma-toast (to notify)
